@@ -1,0 +1,16 @@
+services:
+  website:
+    volumes:
+      - ./website:/usr/share/nginx/html
+    environment:
+      VIRTUAL_HOST: bnbnb.link
+      VIRTUAL_PORT: 80
+      LETSENCRYPT_HOST: bnbnb.link
+      LETSENCRYPT_EMAIL: pulpfictiontaxidriver@yahoo.co.jp
+
+networks:
+  default:
+    external:
+      name: shared
+    
+
